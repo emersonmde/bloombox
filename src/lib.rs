@@ -7,6 +7,7 @@ pub struct BloomBox {
     bit_vector: Vec<bool>,
     seeds: Vec<u64>,
     size: usize,
+    pub insert_count: usize,
 }
 
 impl BloomBox {
@@ -15,6 +16,7 @@ impl BloomBox {
             bit_vector: vec![false; size],
             seeds,
             size,
+            insert_count: 0,
         }
     }
 
@@ -44,6 +46,7 @@ impl BloomBox {
             bit_vector: vec![false; m],
             seeds,
             size: m,
+            insert_count: 0,
         }
     }
 
@@ -58,6 +61,7 @@ impl BloomBox {
             let hashed = self.hash_item(item, seed);
             self.bit_vector[hashed] = true;
         }
+        self.insert_count += 1;
     }
 
     pub fn contains<T: Hash>(&self, item: &T) -> bool {
