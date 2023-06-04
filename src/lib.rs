@@ -73,6 +73,14 @@ impl BloomBox {
         }
         true
     }
+
+    pub fn get_insert_count(&self) -> usize {
+        self.insert_count
+    }
+
+    pub fn get_size(&self) -> usize {
+        self.size
+    }
 }
 
 
