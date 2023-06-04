@@ -81,6 +81,14 @@ impl BloomBox {
     pub fn get_size(&self) -> usize {
         self.size
     }
+
+    pub fn get_seeds(&self) -> &Vec<u64> {
+        &self.seeds
+    }
+
+    pub fn get_num_seeds(&self) -> usize {
+        self.seeds.len()
+    }
 }
 
 
