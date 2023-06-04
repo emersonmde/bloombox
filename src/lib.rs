@@ -2,7 +2,7 @@ use serde::{Serialize, Deserialize};
 use std::{hash::{Hash, Hasher}, f64::consts::LN_2};
 use twox_hash::XxHash;
 
-#[derive(Serialize, Deserialize)]
+#[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct BloomBox {
     bit_vector: Vec<bool>,
     seeds: Vec<u64>,
