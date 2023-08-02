@@ -35,8 +35,3 @@ While this project is not actively maintained, contributions are welcome. If you
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Author
-
-Matthew Emerson
-
-For more information, please refer to the [documentation](https://emersonmde.github.io/bloombox/).
